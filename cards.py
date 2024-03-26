@@ -11,9 +11,9 @@ def filter(dg: DeltaGenerator, data):
     max = data['data'].max()
 
     init_date = pd.to_datetime(col_min.date_input(
-        'data inicial', value=min, min_value=min, max_value=max))
+        'initial date', value=min, min_value=min, max_value=max))
     end_date = pd.to_datetime(col_max.date_input(
-        'data final', value=max, min_value=min, max_value=max))
+        'final date', value=max, min_value=min, max_value=max))
     columns = col_columns.selectbox('categorias', const.columns.keys())
     columns = ['data'] + const.columns[columns]
 
