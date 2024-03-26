@@ -20,5 +20,8 @@ cards.wettest(col_wettest, data)
 col_year_mean = st.columns(1)[0]
 cards.year_mean_temperature(col_year_mean, data)
 
+col_temporal_trends = st.columns(1)[0]
+cards.temporal_trends(col_temporal_trends, data)
+
 col_correlation = st.columns(1)[0]
 cards.correlation(col_correlation, data)

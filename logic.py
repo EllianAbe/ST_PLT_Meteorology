@@ -66,7 +66,7 @@ def create_temperature_trends_chart(data):
 
     fig = px.line(data, x='date', y=['maxima', 'minima'],
                   labels={'value': 'Temperature (°C)', 'date': 'Date'},
-                  title='Temporal Trends of Maximum and Minimum Temperatures')
+                  title='Maximum and Minimum Temperatures')
 
     fig.update_layout(legend=dict(
         yanchor="top", y=0.99, xanchor="left", x=0.01))

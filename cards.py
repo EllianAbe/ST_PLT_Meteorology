@@ -82,8 +82,13 @@ def year_mean_temperature(dg: DeltaGenerator, data):
         mean), use_container_width=True)
 
 
-def correlation(dg, data):
+def correlation(dg: DeltaGenerator, data):
     dg.header("Correlation", divider="rainbow")
 
+    dg.plotly_chart(logic.correlation_heatmap(data))
+
+
+def temporal_trends(dg: DeltaGenerator, data):
+    dg.header("Temporal trends", divider="rainbow")
     dg.plotly_chart(logic.create_temperature_trends_chart(
         data), use_container_width=True)
